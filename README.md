@@ -35,6 +35,6 @@ I'm not sure as to the diff between Apollo, Relay or just pure Redux. Seems like
 * 3) resolvers (what to do for different queries)
 * Schema definitions are inside `index.js` in the `/schema` folder. `graphql-tools` allows schema definitions to be done in a string format
 * Query refers to get requests. Mutations are basically the post/put/patch/delete requests which alter the DB.
-* We only expose 1 API endpoint to the frontend in the form of /graphql
+* We only expose 1 API endpoint to the frontend in the form of `/graphql`. you can test this by opening console, copying the network request body from `/graphiql` and importing it as raw text in Postman.
 * By importing `graphiql`, we can see the GUI (similar to postman but on localhost). this endpoint is `/graphiql`
 * In the `resolvers.js` file, this is similar to `controllers` for our proj4. when receiving queries or mutations, we request the postgres database and return info.
