@@ -9,10 +9,10 @@ const config = require('../config/config.json')['development']
 var sequelize = new Sequelize(config.database, config.username, config.password, config)
 
 var db = {
-  User: sequelize.import('user'),
-  // Pet: sequelize.import('./models/pet')
+  User: sequelize.import('user')
 }
-console.log(db)
+
+// console.log(db)
 
 Object.keys(db).forEach(function (modelName) {
   if (db[modelName].associate) {
@@ -26,7 +26,7 @@ db.Sequelize = Sequelize
 sequelize
   .authenticate()
   .then(() => {
-    console.log('Database connection has been established successfully.')
+    console.log('Sequelize has connected to db')
   })
   .catch(err => {
     console.error('Unable to connect to the database:', err)
