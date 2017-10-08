@@ -9,16 +9,16 @@ const config = require('../config/config.json')['development']
 var sequelize = new Sequelize(config.database, config.username, config.password, config)
 
 var db = {
-  // Owner: sequelize.import('./models/owner'),
+  User: sequelize.import('user'),
   // Pet: sequelize.import('./models/pet')
-  Test: '1'
 }
-//
-// Object.keys(db).forEach(function (modelName) {
-//   if (db[modelName].associate) {
-//     db[modelName].associate(db)
-//   }
-// })
+console.log(db)
+
+Object.keys(db).forEach(function (modelName) {
+  if (db[modelName].associate) {
+    db[modelName].associate(db)
+  }
+})
 
 db.sequelize = sequelize
 db.Sequelize = Sequelize
