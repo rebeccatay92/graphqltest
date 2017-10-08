@@ -1,6 +1,7 @@
 const express = require('express')
 const Sequelize = require('sequelize')
 
+
 /* ----- setting up database config ------ */
 
 // can replace [dev] with [env]
