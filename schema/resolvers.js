@@ -17,12 +17,14 @@ module.exports = {
     allUsers: () => {
       return db.User.findAll()
     }
-  },
-  Mutation: {
-    createUser: (_,data) => {
-      const newUser = Object.assign({id: users.length + 1}, data)
-      users.push(newUser)
-      return newUser
-    }
   }
+  // mutation if using the static array users[], modify if want to test sequelize db
+
+  // Mutation: {
+  //   createUser: (_,data) => {
+  //     const newUser = Object.assign({id: users.length + 1}, data)
+  //     users.push(newUser)
+  //     return newUser
+  //   }
+  // }
 }
