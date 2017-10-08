@@ -1,17 +1,22 @@
-const users = [
-  {
-    id: 1,
-    name: 'testing'
-  },
-  {
-    id: 2,
-    name: 'another user'
-  }
-]
+const db = require('../models/index')
+
+// const users = [
+//   {
+//     id: 1,
+//     name: 'testing'
+//   },
+//   {
+//     id: 2,
+//     name: 'another user'
+//   }
+// ]
 
 module.exports = {
   Query: {
-    allUsers: () => users
+    // allUsers: () => users
+    allUsers: () => {
+      return db.User.findAll()
+    }
   },
   Mutation: {
     createUser: (_,data) => {

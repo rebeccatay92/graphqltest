@@ -12,10 +12,10 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
-    return queryInterface.bulkInsert('users', [{
-      id: 1,
-      name: 'testUser'
-    }], {})
+    return queryInterface.bulkInsert('users', [
+      {id: 1, name: 'testUser1'},
+      {id: 2, name: 'testUser2'}
+    ], {})
 
   },
 
